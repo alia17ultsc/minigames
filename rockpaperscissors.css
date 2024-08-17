@@ -1,0 +1,9 @@
+.me{
+ display: flex;
+  position: fixed;
+  bottom: 0vh;
+  height: 35vh;
+}
+
+.figure{
+}
