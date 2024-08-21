@@ -5,13 +5,22 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Rock, paper, scissors</title>
 <link rel="stylesheet" href="rockpaperscissors.css">
+<script src="rockPaperscissors.js"></script>
 </head>
 <body>
-  <div class="opponent"></div>
+  <div class="opponent">
+    <div>
+      <img id="rockopp" class="figureopp" src="pictures/rock.png" alt="">
+      <img class="figureopp" id="paperopp" src="pictures/paper.png" alt="">
+      <img class="figureopp" id="scissorsopp" src="pictures/scissors.png" alt="">
+    </div>
+  </div>
   <div class="me">
-    <img class="figure" src="pictures/rock.png" alt="">
-    <img class="figure" src="pictures/paper.png" alt="">
-    <img class="figure" src="pictures/scissors.png" alt="">
+    <div>
+    <img onclick="chooserock()" id="rock" class="figure" src="pictures/rock.png" alt="">
+    <img onclick="choosepaper()" class="figure" id="paper" src="pictures/paper.png" alt="">
+    <img onclick="choosescissors()" class="figure" id="scissors" src="pictures/scissors.png" alt="">
+  </div>
   </div>
 </body>
 </html>

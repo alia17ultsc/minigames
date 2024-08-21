@@ -1,9 +1,47 @@
+:root{
+  --screensize: calc(1vh + 1vw);
+}
+*{
+  margin: 0;
+  padding: 0;
+}
+
 .me{
  display: flex;
   position: fixed;
+  width: 100vw;
+  justify-content: center;
   bottom: 0vh;
   height: 35vh;
+  align-items: flex-end;
+}
+.opponent{
+  display: flex;
+   position: fixed;
+   width: 100vw;
+   justify-content: center;
+   top: 0vh;
+   height: 35vh;
+   align-items: flex-start;
+   filter: hue-rotate(250deg);
+ }
+ .figureopp{
+  margin-left: calc(var(--screensize)*0.5);
+  margin-right: calc(var(--screensize)*0.5);
+  margin-top: calc(var(--screensize));
+  transition: all 1s;
+  width: calc(var(--screensize)*6);
 }
 
 .figure{
+  margin-left: calc(var(--screensize)*0.5);
+  margin-right: calc(var(--screensize)*0.5);
+  margin-bottom: calc(var(--screensize));
+  transition: all 1s;
+  width: calc(var(--screensize)*6);
+}
+
+.figure:hover{
+  filter:hue-rotate(78deg);
+  transform: scale(1.2);
 }
