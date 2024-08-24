@@ -45,3 +45,15 @@
   filter:hue-rotate(78deg);
   transform: scale(1.2);
 }
+
+.myscore{
+  position: absolute;
+  left: 5vw;
+  bottom: 15vh;
+}
+
+.oppscore{
+  position: absolute;
+  right: 5vw;
+  top: 3vh;
+}
