@@ -47,13 +47,37 @@
 }
 
 .myscore{
+  font-size: 1.6vw;
   position: absolute;
   left: 5vw;
   bottom: 15vh;
 }
 
 .oppscore{
+  font-size: 1.6vw;
   position: absolute;
-  right: 5vw;
+  right: 2vw;
   top: 3vh;
 }
+
+.homebutton{
+  position: absolute;
+  left: 2vw;
+  top: 2vh;
+}
+
+.homebtn{
+  width: 5vw;
+  transition: 1s;
+}
+
+.homebtn:hover{
+  transform: rotate(45deg) scale(1.5);
+}
+
+
+
+
+
+
+
