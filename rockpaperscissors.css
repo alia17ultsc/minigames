@@ -64,17 +64,24 @@
   position: absolute;
   left: 2vw;
   top: 2vh;
+  z-index: 2;
 }
 
 .homebtn{
   width: 5vw;
   transition: 1s;
+  z-index: 2;
 }
 
 .homebtn:hover{
   transform: rotate(45deg) scale(1.5);
 }
 
+.qqqq{
+  position: absolute;  
+  top: 5vh;
+  left: 40vw;;
+}
 
 
 
