@@ -3,6 +3,8 @@ var ourmove=null;
 var ourdistance=5.5;
 var oppmove=null;
 var oppdistance=3.5;
+var mypoints=0;
+var oppPoints=0;
 
 
 function checkstartgame(){
@@ -28,7 +30,7 @@ function chooserock(){
   oppchoice();
   ourmove=rock;
   ourdistance=10.37;
-  setTimeout(show_winner, 1000);
+  var t = setTimeout(show_winner, 1000);
 }
 
 
@@ -36,8 +38,79 @@ function show_winner(){
 ourmove.style.transform="translateY(-37vh) translateX(calc("+ourdistance+"vw))";
 oppmove.style.transform="translateY(36vh) translateX(calc("+oppdistance+"vw))";
 console.log("translateY(-37vh) translateX(calc("+ourdistance+"vw))");
-
+gameresult();
+clearTimeout(t);
 }
+
+function gameresult(){
+  var opponentspoints=document.getElementsByClassName("oppscore")[0];
+  var myPoints=document.getElementsByClassName("myscore")[0];
+  var winnertext=document.getElementsByClassName("winner")[0];
+  var btns=document.getElementsByClassName("btns")[0];
+  btns.style.opacity="1";
+  btns.classList.add("bigZindex");
+  winnertext.style.opacity="1";
+  if (ourmove.id == "rock"){
+    if (oppmove.id == "paperopp"){
+      winnertext.innerHTML="YOU LOST";
+      oppPoints+=1;
+      ourmove.style.opacity="0";
+      opponentspoints.innerHTML=`Opponent's point: ${oppPoints}`;
+    }
+    else if (oppmove.id == "scissorsopp"){
+      winnertext.innerHTML="YOU WIN";
+      mypoints+=1;
+      myPoints.innerHTML=`My points: ${mypoints}`;
+    }
+    else{
+      winnertext.innerHTML="ITS A TIE";
+    }
+  }
+  else if (ourmove.id == "paper"){
+    if (oppmove.id == "scissorsopp"){
+      winnertext.innerHTML="YOU LOST";
+      oppPoints+=1;
+      ourmove.style.opacity="0";
+      opponentspoints.innerHTML=`Opponent's point: ${oppPoints}`;
+    }
+    else if (oppmove.id == "rockopp"){
+      winnertext.innerHTML="YOU WIN";
+      mypoints+=1;
+      myPoints.innerHTML=`My points: ${mypoints}`;
+    }
+    else{
+      winnertext.innerHTML="ITS A TIE";
+    }
+  }
+}
+
+function restartgame(){
+  var winnertext=document.getElementsByClassName("winner")[0];
+  winnertext.style.opacity="0";
+  var btns=document.getElementsByClassName("btns")[0];
+  btns.style.opacity="0";
+  btns.classList.remove("bigZindex");
+  var rock=document.getElementById("rock");
+  var scissors=document.getElementById("scissors");
+  var paper=document.getElementById("paper");
+  rock.style.transform="translateX(0) translateY(0)";
+  paper.style.transform="translateX(0) translateY(0)";
+  scissors.style.transform="translateX(0) translateY(0)";
+  rock.style.opacity="1";
+  paper.style.opacity="1";
+  scissors.style.opacity="1";
+  startgame=false;
+  var rockopp=document.getElementById("rockopp");
+  var scissorsopp=document.getElementById("scissorsopp");
+  var paperopp=document.getElementById("paperopp");
+  rockopp.style.transform="translateX(0) translateY(0)";
+  paperopp.style.transform="translateX(0) translateY(0)";
+  scissorsopp.style.transform="translateX(0) translateY(0)";
+  rockopp.style.opacity="1";
+  paperopp.style.opacity="1";
+  scissorsopp.style.opacity="1";
+}
+
 
 
 function choosepaper(){

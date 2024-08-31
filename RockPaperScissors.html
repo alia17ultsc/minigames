@@ -18,7 +18,9 @@
       <img class="figureopp" id="scissorsopp" src="pictures/scissors.png" alt="">
     </div>
   </div>
-<div class="qqqq">test 1</div>
+  
+<div class="winner">YOU WON!</div>
+
   <div class="me">
     <div>
     <img onclick="chooserock()" id="rock" class="figure" src="pictures/rock.png" alt="">
@@ -26,7 +28,11 @@
     <img onclick="choosescissors()" class="figure" id="scissors" src="pictures/scissors.png" alt="">
   </div>
   </div>
-  <div class="myscore">My points:</div>
-  <div class="oppscore">Opponent's point:</div>
+  <div class="myscore">My points: 0</div>
+  <div class="oppscore">Opponent's point: 0</div>
+  <div class="btns">
+    <button class="btn" id="restartbtn" onclick="restartgame()">Restart Game</button>
+    <button class="btn" id="exitgamebtn">Exit Game</button>
+  </div>
 </body>
 </html>
