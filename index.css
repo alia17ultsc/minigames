@@ -1,0 +1,46 @@
+*{
+  padding: 0;
+  margin: 0;
+}
+
+.titlecont{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+h2{
+  font-size: 4vw;
+
+}
+
+.game{
+  display: flex;
+  flex-direction: column;
+  width: 20vw;
+  align-items: center;
+  border: 2px solid black;
+  border-radius: 20px;
+}
+
+.gameIcon{
+  width: 15vw;
+}
+
+titlegame{
+  font-size: 1.5vw;
+}
+
+.startgame{
+  padding: 0.7vw;
+  border-radius: 25px;
+  margin-bottom: 1.5vh;
+  font-size: 1.3vw;
+}
+
+
+
+
+
+
+

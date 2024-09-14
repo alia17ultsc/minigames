@@ -42,6 +42,25 @@ gameresult();
 clearTimeout(t);
 }
 
+
+function winnercheck(loseObj, winObj, winnertext, opponentspoints, myPoints){
+  if (oppmove.id == loseObj){
+    winnertext.innerHTML="YOU LOST";
+    oppPoints+=1;
+    ourmove.style.opacity="0";
+    opponentspoints.innerHTML=`Opponent's point: ${oppPoints}`;
+  }
+  else if (oppmove.id == winObj){
+    winnertext.innerHTML="YOU WIN";
+    mypoints+=1;
+    myPoints.innerHTML=`My points: ${mypoints}`;
+  }
+  else{
+    winnertext.innerHTML="ITS A TIE";
+  }
+}
+
+
 function gameresult(){
   var opponentspoints=document.getElementsByClassName("oppscore")[0];
   var myPoints=document.getElementsByClassName("myscore")[0];
@@ -51,36 +70,13 @@ function gameresult(){
   btns.classList.add("bigZindex");
   winnertext.style.opacity="1";
   if (ourmove.id == "rock"){
-    if (oppmove.id == "paperopp"){
-      winnertext.innerHTML="YOU LOST";
-      oppPoints+=1;
-      ourmove.style.opacity="0";
-      opponentspoints.innerHTML=`Opponent's point: ${oppPoints}`;
-    }
-    else if (oppmove.id == "scissorsopp"){
-      winnertext.innerHTML="YOU WIN";
-      mypoints+=1;
-      myPoints.innerHTML=`My points: ${mypoints}`;
-    }
-    else{
-      winnertext.innerHTML="ITS A TIE";
-    }
+    winnercheck("paperopp", "scissorsopp", winnertext, opponentspoints, myPoints);
   }
   else if (ourmove.id == "paper"){
-    if (oppmove.id == "scissorsopp"){
-      winnertext.innerHTML="YOU LOST";
-      oppPoints+=1;
-      ourmove.style.opacity="0";
-      opponentspoints.innerHTML=`Opponent's point: ${oppPoints}`;
-    }
-    else if (oppmove.id == "rockopp"){
-      winnertext.innerHTML="YOU WIN";
-      mypoints+=1;
-      myPoints.innerHTML=`My points: ${mypoints}`;
-    }
-    else{
-      winnertext.innerHTML="ITS A TIE";
-    }
+    winnercheck("scissorsopp", "rockopp", winnertext, opponentspoints, myPoints);
+  }
+  else if (ourmove.id == "scissors"){
+    winnercheck("rockopp", "paperopp", winnertext, opponentspoints, myPoints);
   }
 }
 
