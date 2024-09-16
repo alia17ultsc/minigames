@@ -75,7 +75,7 @@
 }
 
 .homebtn:hover{
-  transform: rotate(45deg) scale(1.5);
+  transform: rotate(-20deg) scale(1.2);
 }
 
 .winner{
