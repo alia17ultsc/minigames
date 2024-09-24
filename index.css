@@ -3,6 +3,19 @@
   margin: 0;
 }
 
+@font-face {
+  font-family: 'vivaldi';
+  src: url(vivaldi-script.woff2) format('woff2');
+}
+
+@font-face {
+  font-family: 'beaum';
+  src: url(beaumarchaisc.woff2);
+}
+
+body{
+  font-family: beaum, sans-serif;
+}
 .titlecont{
   display: flex;
   justify-content: center;

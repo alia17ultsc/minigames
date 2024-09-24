@@ -1,9 +1,23 @@
 :root{
   --screensize: calc(1vh + 1vw);
 }
+
+@font-face {
+  font-family: 'vivaldi';
+  src: url(vivaldi-script.woff2) format('woff2');
+}
+
+@font-face {
+  font-family: 'beaum';
+  src: url(beaumarchaisc.woff2);
+}
 *{
   margin: 0;
   padding: 0;
+}
+
+body{
+  font-family: beaum, sans-serif;
 }
 
 .me{
