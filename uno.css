@@ -89,18 +89,77 @@ titlegame{
   top: 27.5vh;
 }
 
+.p6{
+  left: 16.8vw;
+  top: 28vh;
+}
+
+.p7{
+  left: 17.1vw;
+  top: 28.5vh;
+}
 
 
-.move{
-  animation: disturbutingCards 0.25s forwards;
+
+.move7{
+  animation: disturbutingCards 0.5s forwards;
 } 
+
+
+.mr1{
+  animation: mr1 1s forwards;
+} 
+
+.mr2{
+  animation: mr2 1s forwards;
+}
+
+.mr3{
+  animation: mr3 1s forwards;
+}
+
+.mr4{
+  animation: mr4 1s forwards;
+}
+
+.mr5{
+  animation: mr5 1s forwards;
+}
+
+.mr6{
+  animation: mr6 1s forwards;
+}
+
+.mr7{
+  animation: mr7 1s forwards;
+} 
+
+
 
 .move1{
   animation: disturbutingCards1 0.5s forwards;
 } 
 
 .move2{
-  animation: disturbutingCards2 0.75s forwards;
+  animation: disturbutingCards2 0.5s forwards;
 } 
+
+.move3{
+  animation: disturbutingCards3 0.5s forwards;
+} 
+
+
+.move4{
+  animation: disturbutingCards4 0.5s forwards;
+} 
+
+.move5{
+  animation: disturbutingCards5 0.5s forwards;
+} 
+
+.move6{
+  animation: disturbutingCards6 0.5s forwards;
+} 
+
 
 

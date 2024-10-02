@@ -13,7 +13,7 @@
     transform: translate(0px, 0px);
 
   }
-  50%{
+  14%{
     transform: translate(0px, 0px);
 
   }
@@ -27,7 +27,7 @@
       transform: translate(0px, 0px);
   
     }
-    66%{
+    28%{
       transform: translate(0px, 0px);
   
     }
@@ -35,3 +35,133 @@
       transform: translate(20vw, -32vh);
     }
 }
+
+@keyframes disturbutingCards3{
+  0%{
+    transform: translate(0px, 0px);
+
+  }
+  43%{
+    transform: translate(0px, 0px);
+
+  }
+  100%{
+    transform: translate(20vw, -32vh);
+  }
+}
+
+@keyframes disturbutingCards4{
+  0%{
+    transform: translate(0px, 0px);
+
+  }
+  57%{
+    transform: translate(0px, 0px);
+
+  }
+  100%{
+    transform: translate(20vw, -32vh);
+  }
+}
+
+@keyframes disturbutingCards5{
+  0%{
+    transform: translate(0px, 0px);
+
+  }
+  72%{
+    transform: translate(0px, 0px);
+
+  }
+  100%{
+    transform: translate(20vw, -32vh);
+  }
+}
+
+@keyframes disturbutingCards6{
+  0%{
+    transform: translate(0px, 0px);
+
+  }
+  86%{
+    transform: translate(0px, 0px);
+
+  }
+  100%{
+    transform: translate(20vw, -32vh);
+  }
+}
+
+@keyframes mr1{
+  0%{
+    transform: translate(20vw, -32vh);
+  }
+  50%{
+    transform: translate(20vw, -32vh);
+  }
+  100%{
+    transform: translate(40vw, -32vh);
+  }
+
+}
+
+@keyframes mr2{
+  0%{
+    transform: translate(20vw, -32vh);
+  }
+  50%{
+    transform: translate(20vw, -32vh);
+  }
+  100%{
+    transform: translate(30vw, -32vh);
+  }
+
+}
+
+@keyframes mr3{
+  0%{
+    transform: translate(20vw, -32vh);
+  }
+  50%{
+    transform: translate(20vw, -32vh);
+  }
+  100%{
+    transform: translate(35vw, -28vh);
+  }
+  
+}
+@keyframes mr4{
+  0%{
+    transform: translate(20vw, -32vh);
+  }
+  50%{
+    transform: translate(20vw, -32vh);
+  }
+  100%{
+    transform: translate(40vw, -32vh);
+  }
+
+}@keyframes mr5{
+  0%{
+    transform: translate(20vw, -32vh);
+  }
+  50%{
+    transform: translate(20vw, -32vh);
+  }
+  100%{
+    transform: translate(15vw, -32vh);
+  }
+
+}@keyframes mr6{
+  0%{
+    transform: translate(20vw, -32vh);
+  }
+  50%{
+    transform: translate(20vw, -32vh);
+  }
+  100%{
+    transform: translate(10vw, -32vh);
+  }
+
+}
+
