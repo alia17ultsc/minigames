@@ -1,4 +1,4 @@
-@keyframes disturbutingCards{
+@keyframes disturbutingCards1{
   0%{
     transform: translate(0px, 0px);
 
@@ -8,7 +8,7 @@
   }
 }
 
-@keyframes disturbutingCards1{
+@keyframes disturbutingCards2{
   0%{
     transform: translate(0px, 0px);
 
@@ -22,7 +22,7 @@
   }
 }
 
-  @keyframes disturbutingCards2{
+  @keyframes disturbutingCards3{
     0%{
       transform: translate(0px, 0px);
   
@@ -36,7 +36,7 @@
     }
 }
 
-@keyframes disturbutingCards3{
+@keyframes disturbutingCards4{
   0%{
     transform: translate(0px, 0px);
 
@@ -50,7 +50,7 @@
   }
 }
 
-@keyframes disturbutingCards4{
+@keyframes disturbutingCards5{
   0%{
     transform: translate(0px, 0px);
 
@@ -64,7 +64,7 @@
   }
 }
 
-@keyframes disturbutingCards5{
+@keyframes disturbutingCards6{
   0%{
     transform: translate(0px, 0px);
 
@@ -78,7 +78,7 @@
   }
 }
 
-@keyframes disturbutingCards6{
+@keyframes disturbutingCards7{
   0%{
     transform: translate(0px, 0px);
 
@@ -96,11 +96,9 @@
   0%{
     transform: translate(20vw, -32vh);
   }
-  50%{
-    transform: translate(20vw, -32vh);
-  }
+
   100%{
-    transform: translate(40vw, -32vh);
+    transform: translate(35vw, -32vh);
   }
 
 }
@@ -109,11 +107,8 @@
   0%{
     transform: translate(20vw, -32vh);
   }
-  50%{
-    transform: translate(20vw, -32vh);
-  }
   100%{
-    transform: translate(30vw, -32vh);
+    transform: translate(32vw, -32vh);
   }
 
 }
@@ -122,11 +117,8 @@
   0%{
     transform: translate(20vw, -32vh);
   }
-  50%{
-    transform: translate(20vw, -32vh);
-  }
   100%{
-    transform: translate(35vw, -28vh);
+    transform: translate(28vw, -32vh);
   }
   
 }
@@ -134,34 +126,199 @@
   0%{
     transform: translate(20vw, -32vh);
   }
-  50%{
-    transform: translate(20vw, -32vh);
-  }
   100%{
-    transform: translate(40vw, -32vh);
+    transform: translate(20vw, -32vh);
   }
 
 }@keyframes mr5{
   0%{
     transform: translate(20vw, -32vh);
   }
-  50%{
-    transform: translate(20vw, -32vh);
-  }
   100%{
-    transform: translate(15vw, -32vh);
+    transform: translate(17vw, -32vh);
   }
 
-}@keyframes mr6{
+}
+@keyframes mr6{
   0%{
     transform: translate(20vw, -32vh);
   }
-  50%{
-    transform: translate(20vw, -32vh);
-  }
   100%{
-    transform: translate(10vw, -32vh);
+    transform: translate(13vw, -32vh);
   }
 
 }
 
+@keyframes mr7{
+  0%{
+    transform: translate(20vw, -32vh);
+  }
+  100%{
+    transform: translate(7vw, -32vh);
+  }
+
+}
+
+
+@keyframes disturbutingmyCards1{
+  0%{
+    transform: translate(0px, 0px);
+
+  }
+  100%{
+    transform: translate(20vw, 32vh);
+  }
+}
+
+@keyframes disturbutingmyCards2{
+  0%{
+    transform: translate(0px, 0px);
+
+  }
+  14%{
+    transform: translate(0px, 0px);
+
+  }
+  100%{
+    transform: translate(20vw, 32vh);
+  }
+}
+
+  @keyframes disturbutingmyCards3{
+    0%{
+      transform: translate(0px, 0px);
+  
+    }
+    28%{
+      transform: translate(0px, 0px);
+  
+    }
+    100%{
+      transform: translate(20vw, 32vh);
+    }
+}
+
+@keyframes disturbutingmyCards4{
+  0%{
+    transform: translate(0px, 0px);
+
+  }
+  43%{
+    transform: translate(0px, 0px);
+
+  }
+  100%{
+    transform: translate(20vw, 32vh);
+  }
+}
+
+@keyframes disturbutingmyCards5{
+  0%{
+    transform: translate(0px, 0px);
+
+  }
+  57%{
+    transform: translate(0px, 0px);
+
+  }
+  100%{
+    transform: translate(20vw, 32vh);
+  }
+}
+
+@keyframes disturbutingmyCards6{
+  0%{
+    transform: translate(0px, 0px);
+
+  }
+  72%{
+    transform: translate(0px, 0px);
+
+  }
+  100%{
+    transform: translate(20vw, 32vh);
+  }
+}
+
+@keyframes disturbutingmyCards7{
+  0%{
+    transform: translate(0px, 0px);
+
+  }
+  86%{
+    transform: translate(0px, 0px);
+
+  }
+  100%{
+    transform: translate(20vw, 32vh);
+  }
+}
+
+
+
+@keyframes mmr1{
+  0%{
+    transform: translate(20vw, 32vh);
+  }
+
+  100%{
+    transform: translate(35vw, 32vh);
+  }
+
+}
+
+@keyframes mmr2{
+  0%{
+    transform: translate(20vw, 32vh);
+  }
+  100%{
+    transform: translate(32vw, 32vh);
+  }
+
+}
+
+@keyframes mmr3{
+  0%{
+    transform: translate(20vw, 32vh);
+  }
+  100%{
+    transform: translate(28vw, 32vh);
+  }
+  
+}
+@keyframes mmr4{
+  0%{
+    transform: translate(20vw, 32vh);
+  }
+  100%{
+    transform: translate(20vw, 32vh);
+  }
+
+}@keyframes mmr5{
+  0%{
+    transform: translate(20vw, 32vh);
+  }
+  100%{
+    transform: translate(17vw, 32vh);
+  }
+
+}
+@keyframes mmr6{
+  0%{
+    transform: translate(20vw, 32vh);
+  }
+  100%{
+    transform: translate(13vw, 32vh);
+  }
+
+}
+
+@keyframes mmr7{
+  0%{
+    transform: translate(20vw, 32vh);
+  }
+  100%{
+    transform: translate(7vw, 32vh);
+  }
+
+}

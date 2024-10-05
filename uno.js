@@ -10,24 +10,31 @@ function hideAll(){
 
 function timeoutAnimationLoadPage(){
   var allCards=document.getElementsByClassName("deck");
-
-  for (var cardIndex=0; cardIndex<allCards.length; cardIndex++){
-    var classname=`move${cardIndex+1}`;
+  var allmyCards=document.getElementsByClassName("mydeck");
+  for (var cardIndex=1; cardIndex<allCards.length; cardIndex++){
+    var classname=`move${cardIndex}`;
       allCards[cardIndex].classList.add(classname);
+      var myclassname=`mymove${cardIndex}`;
+      allmyCards[cardIndex].classList.add(myclassname);
   }
 
-  setTimeout(AnimationLoadPage, 500);
+  setTimeout(AnimationLoadPage, 800);
 }
 
 function AnimationLoadPage(){
   var allCards=document.getElementsByClassName("deck");
-
+  var allmyCards=document.getElementsByClassName("mydeck");
   for (var cardIndex=1; cardIndex<allCards.length; cardIndex++){
-    console.log(cardIndex);
     var classname=`mr${cardIndex}`;
-    console.log(classname);
-    allCards[cardIndex].classList.remove(`move${cardIndex+1}`);
-      allCards[cardIndex].classList.add(classname);
+    allCards[cardIndex].classList.remove(`move${cardIndex}`);
+    allmyCards[cardIndex].classList.remove(`mymove${cardIndex}`); 
+
+    allCards[cardIndex].classList.remove(`p${cardIndex}`); // layer up to down
+    allCards[cardIndex].classList.add(classname);
+    var myclassname=`mmr${cardIndex}`;
+    allmyCards[cardIndex].classList.add(myclassname);
+    allCards[cardIndex].classList.add('p7');
+    allmyCards[cardIndex].classList.add('p8');
   }
 
 

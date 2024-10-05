@@ -65,45 +65,49 @@ titlegame{
   top: 25vh;
 }
 
+.mydeck{
+  width: 12vw;
+  position: absolute;
+  left: 15vw;
+  top: 25vh;
+}
+
 .p1{
   left: 15.3vw;
-  top: 25.5vh;
+  top: 25vh;
 }
 
 .p2{
   left: 15.6vw;
-  top: 26vh;
+  top: 25vh;
 }
 
 .p3{
   left: 15.9vw;
-  top: 26.5vh;
+  top: 25vh;
 }
 
 .p4{
   left: 16.2vw;
-  top: 27vh;
+  top: 25vh;
 }
 .p5{
   left: 16.5vw;
-  top: 27.5vh;
+  top: 25vh;
 }
 
 .p6{
   left: 16.8vw;
-  top: 28vh;
+  top: 25vh;
 }
 
 .p7{
   left: 17.1vw;
-  top: 28.5vh;
+  top: 27.5vh;
 }
-
-
-
-.move7{
-  animation: disturbutingCards 0.5s forwards;
-} 
+ .p8{
+  top: 23vh;
+ }
 
 
 .mr1{
@@ -135,6 +139,34 @@ titlegame{
 } 
 
 
+.mmr1{
+  animation: mmr1 1s forwards;
+} 
+
+.mmr2{
+  animation: mmr2 1s forwards;
+}
+
+.mmr3{
+  animation: mmr3 1s forwards;
+}
+
+.mmr4{
+  animation: mmr4 1s forwards;
+}
+
+.mmr5{
+  animation: mmr5 1s forwards;
+}
+
+.mmr6{
+  animation: mmr6 1s forwards;
+}
+
+.mmr7{
+  animation: mmr7 1s forwards;
+} 
+
 
 .move1{
   animation: disturbutingCards1 0.5s forwards;
@@ -161,5 +193,39 @@ titlegame{
   animation: disturbutingCards6 0.5s forwards;
 } 
 
+.move7{
+  animation: disturbutingCards7 0.5s forwards;
+} 
 
 
+
+
+
+.mymove1{
+  animation: disturbutingmyCards1 0.5s forwards;
+} 
+
+.mymove2{
+  animation: disturbutingmyCards2 0.5s forwards;
+} 
+
+.mymove3{
+  animation: disturbutingmyCards3 0.5s forwards;
+} 
+
+
+.mymove4{
+  animation: disturbutingmyCards4 0.5s forwards;
+} 
+
+.mymove5{
+  animation: disturbutingmyCards5 0.5s forwards;
+} 
+
+.mymove6{
+  animation: disturbutingmyCards6 0.5s forwards;
+} 
+
+.mymove7{
+  animation: disturbutingmyCards7 0.5s forwards;
+} 
