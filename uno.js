@@ -1,3 +1,35 @@
+var deckCards=[];
+var usedCards=[];
+
+function fullDeck(){
+  var cardColor=['R', 'G', 'B', 'Y'];
+  var cardValues=['_', '0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'D2', 'skip'];
+  for (var n = 0; n < 2; n++){
+   for (var i = 0; i<cardColor.length; i++){
+    for (var e = 0; e<cardValues.length; e++){
+      var cardName=`${cardValues[e]}${cardColor[i]}.png`;
+      deckCards.push(cardName);
+    }
+  }
+  deckCards.push("W.png");
+  deckCards.push("D4W.png");
+}
+  console.log(deckCards);
+  var firstOpenCard=document.getElementsByClassName("firstOpenCard")[0];
+  var firstCard=Math.floor(Math.random()*108);
+  var nameCard = deckCards[firstCard];
+  // check if namecard equals skip card ect.
+  while (nameCard == 'W.png'){
+     firstCard=Math.floor(Math.random()*108);
+     nameCard = deckCards[firstCard];
+  }
+  firstOpenCard.src=`cards-front/${nameCard}`;
+  usedCards.push(firstCard);
+  //firstOpenCard.classList.add("rotateCards");
+}
+
+fullDeck();
+
 function hideAll(){
   //var title=document.getElementById("title");
   var title=document.getElementsByClassName("title")[0];
@@ -35,9 +67,19 @@ function AnimationLoadPage(){
     allmyCards[cardIndex].classList.add(myclassname);
     allCards[cardIndex].classList.add('p7');
     allmyCards[cardIndex].classList.add('p8');
+
   }
 
+  setTimeout(showMyCards, 1000);
+}
 
+function showMyCards(){
+  var allmyCards=document.getElementsByClassName("mydeck");
+  for (var cardIndex=1; cardIndex<allmyCards.length; cardIndex++){
+    var numCard=Math.floor(Math.random()*108);
+    allmyCards[cardIndex].src=`cards-front/${deckCards[numCard]}`;
+
+  }
 }
 
 timeoutAnimationLoadPage();

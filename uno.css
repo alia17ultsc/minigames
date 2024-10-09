@@ -59,14 +59,18 @@ titlegame{
 }
 
 .deck{
-  width: 12vw;
+  width: 8vw;
   position: absolute;
-  left: 15vw;
+  left: 7vw;
   top: 25vh;
 }
 
+.moveLeft{
+  left: 7vw;
+}
+
 .mydeck{
-  width: 12vw;
+  width: 8vw;
   position: absolute;
   left: 15vw;
   top: 25vh;
@@ -229,3 +233,21 @@ titlegame{
 .mymove7{
   animation: disturbutingmyCards7 0.5s forwards;
 } 
+
+
+.rotateCards{
+  transform: rotate(180deg);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
