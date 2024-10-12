@@ -19,7 +19,7 @@
     <div class="game">
       <titlegame>Ping Pong</titlegame>
       <img class="gameIcon" src="pictures/pingpong.png" alt="">
-      <button class="startgame">Play Game</button>
+      <button onclick="window.location.href='pingpong.html'" class="startgame">Play Game</button>
     </div>  
     <div class="game">
       <titlegame>Uno</titlegame>
@@ -29,9 +29,26 @@
     <div class="game">
       <titlegame>Random Game</titlegame>
       <img class="gameIcon" src="pictures/randomgame.png" alt="">
-      <button class="startgame">Random</button>
+      <button onclick="random_game()" class="startgame">Random</button>
     </div>
     </div>
   </div>
+  <script>
+
+     function random_game(){
+      var random_game = Math.floor(Math.random()* 3) +1;
+      console.log(random_game);
+       if (random_game == 2){
+         window.location.href='RockPaperScissors.html';
+       }
+       else if(random_game == 1){
+        window.location.href='uno.html';
+       }
+       else if (random_game == 3){
+         window.location.href='pingpong.html';
+       }
+     }
+  
+  </script>
 </body>
 </html>

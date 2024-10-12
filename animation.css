@@ -108,7 +108,7 @@
     transform: translate(20vw, -32vh);
   }
   100%{
-    transform: translate(32vw, -32vh);
+    transform: translate(30vw, -32vh);
   }
 
 }
@@ -118,7 +118,7 @@
     transform: translate(20vw, -32vh);
   }
   100%{
-    transform: translate(28vw, -32vh);
+    transform: translate(25vw, -32vh);
   }
   
 }
@@ -135,7 +135,7 @@
     transform: translate(20vw, -32vh);
   }
   100%{
-    transform: translate(17vw, -32vh);
+    transform: translate(15vw, -32vh);
   }
 
 }
@@ -144,7 +144,7 @@
     transform: translate(20vw, -32vh);
   }
   100%{
-    transform: translate(13vw, -32vh);
+    transform: translate(10vw, -32vh);
   }
 
 }
@@ -154,7 +154,7 @@
     transform: translate(20vw, -32vh);
   }
   100%{
-    transform: translate(7vw, -32vh);
+    transform: translate(5vw, -32vh);
   }
 
 }
@@ -262,7 +262,7 @@
   }
 
   100%{
-    transform: translate(35vw, 32vh);
+    transform: translate(37vw, 32vh);
   }
 
 }
@@ -272,7 +272,7 @@
     transform: translate(20vw, 32vh);
   }
   100%{
-    transform: translate(32vw, 32vh);
+    transform: translate(30vw, 32vh);
   }
 
 }
@@ -282,7 +282,7 @@
     transform: translate(20vw, 32vh);
   }
   100%{
-    transform: translate(28vw, 32vh);
+    transform: translate(25vw, 32vh);
   }
   
 }
@@ -299,7 +299,7 @@
     transform: translate(20vw, 32vh);
   }
   100%{
-    transform: translate(17vw, 32vh);
+    transform: translate(15vw, 32vh);
   }
 
 }
@@ -308,7 +308,7 @@
     transform: translate(20vw, 32vh);
   }
   100%{
-    transform: translate(13vw, 32vh);
+    transform: translate(10vw, 32vh);
   }
 
 }
@@ -318,7 +318,81 @@
     transform: translate(20vw, 32vh);
   }
   100%{
-    transform: translate(7vw, 32vh);
+    transform: translate(5vw, 32vh);
+  }
+
+}
+
+
+
+@keyframes animationcard1{
+  0%{
+    transform: translate(37vw, 32vh);
+  }
+
+  100%{
+    transform: translate(21.5vw, -0.8vh);
+  }
+
+}
+@keyframes animationcard2{
+  0%{
+    transform: translate(30vw, 32vh);
+  }
+
+  100%{
+    transform: translate(21.5vw, -0.8vh);
+  }
+
+}
+@keyframes animationcard3{
+  0%{
+    transform: translate(25vw, 32vh);
+  }
+
+  100%{
+    transform: translate(21.5vw, -0.8vh);
+  }
+
+}
+@keyframes animationcard4{
+  0%{
+    transform: translate(20vw, 32vh);
+  }
+
+  100%{
+    transform: translate(21.5vw, -0.8vh);
+  }
+
+}
+@keyframes animationcard5{
+  0%{
+    transform: translate(15vw, 32vh);
+  }
+
+  100%{
+    transform: translate(21.5vw, -0.8vh);
+  }
+
+}
+@keyframes animationcard6{
+  0%{
+    transform: translate(10vw, 32vh);
+  }
+
+  100%{
+    transform: translate(21.5vw, -0.8vh);
+  }
+
+}
+
+@keyframes animationcard7{
+  0%{
+    transform: translate(5vw, 32vh);
+  }
+
+  100%{
+    transform: translate(21.5vw, -0.8vh);
   }
 
 }

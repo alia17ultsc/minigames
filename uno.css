@@ -11,6 +11,10 @@
   margin-top: 5vh;
 }
 
+.gamefield{
+  display: none;
+}
+
 .entername{
   margin-right: 3vw;
 }
@@ -55,13 +59,31 @@ titlegame{
   height: 95vh;
   left: 10vw;
   top: 3vh;
-  background-color: blueviolet;
+  border: 3px dashed rgba(196, 15, 15, 0.89);
+  background-color: rgb(226, 189, 172);
+}
+
+.compcardscont{
+  position: absolute;
+  top: 7vh;
+  right: 81.5vw;
+}
+
+.mycardscont{
+  position: absolute;
+  top: 13vh;
+  right: 81.5vw;
+}
+
+.deckcardscont{
+  position: absolute;
+  top: 10vh;
 }
 
 .deck{
   width: 8vw;
   position: absolute;
-  left: 7vw;
+  left: 15vw;
   top: 25vh;
 }
 
@@ -74,6 +96,12 @@ titlegame{
   position: absolute;
   left: 15vw;
   top: 25vh;
+  transition: all 0.5s;
+  z-index: 8;
+}
+
+.mydeck:hover{
+ border: 3px solid black;
 }
 
 .p1{
@@ -112,6 +140,35 @@ titlegame{
  .p8{
   top: 23vh;
  }
+
+.animationcard1{
+  animation: animationcard1 1s forwards;
+}
+
+.animationcard2{
+  animation: animationcard2 1s forwards;
+}
+
+.animationcard3{
+  animation: animationcard3 1s forwards;
+}
+
+.animationcard4{
+  animation: animationcard4 1s forwards;
+}
+
+.animationcard5{
+  animation: animationcard5 1s forwards;
+}
+
+.animationcard6{
+  animation: animationcard6 1s forwards;
+}
+
+.animationcard7{
+  animation: animationcard7 1s forwards;
+}
+
 
 
 .mr1{
@@ -237,6 +294,11 @@ titlegame{
 
 .rotateCards{
   transform: rotate(180deg);
+}
+
+.firstOpenCardMove{
+  transition: all 1s;
+  transform: translateX(20vw);
 }
 
 
