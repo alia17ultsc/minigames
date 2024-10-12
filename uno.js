@@ -1,34 +1,55 @@
 var deckCards=[];
 var usedCards=[];
-
-function fullDeck(){
-  var cardColor=['R', 'G', 'B', 'Y'];
-  var cardValues=['_', '0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'D2', 'skip'];
-  for (var n = 0; n < 2; n++){
-   for (var i = 0; i<cardColor.length; i++){
-    for (var e = 0; e<cardValues.length; e++){
-      var cardName=`${cardValues[e]}${cardColor[i]}.png`;
-      deckCards.push(cardName);
+var mycards=[];
+var oppsCards=[];
+function check_Card(cards, card){
+  for(var i = 0; i<cards.length; i++){
+    if (card == cards[i]){
+      return true;
     }
   }
-  deckCards.push("W.png");
-  deckCards.push("D4W.png");
+  return false;
 }
+
+
+function fullDeck(){
+  var notFirstCards = ['D2B.png', 'D2G.png', 'D2R.png', 'D2Y.png', 'D4W.png', 'skipB.png', 'skipG.png', 'skipR.png', 'skipY.png', 'W.png'];
+  allCards_deck();
   console.log(deckCards);
   var firstOpenCard=document.getElementsByClassName("firstOpenCard")[0];
   var firstCard=Math.floor(Math.random()*108);
-  var nameCard = deckCards[firstCard];
+  var nameCard = deckCards[firstCard].card_symbol;
   // check if namecard equals skip card ect.
-  while (nameCard == 'W.png'){
+
+  console.log('sonya');
+  while (check_Card(notFirstCards, nameCard)== true){
+    console.log(nameCard);
      firstCard=Math.floor(Math.random()*108);
-     nameCard = deckCards[firstCard];
+     nameCard = deckCards[firstCard].card_symbol;
   }
+  console.log('sdsfddg');
   firstOpenCard.src=`cards-front/${nameCard}`;
   usedCards.push(firstCard);
   //firstOpenCard.classList.add("rotateCards");
 }
 
 fullDeck();
+
+function allCards_deck() {
+  var cardColor = ['R', 'G', 'B', 'Y'];
+  var cardValues = ['_', '0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'D2', 'skip'];
+  for (var n = 0; n < 2; n++) {
+    for (var i = 0; i < cardColor.length; i++) {
+      for (var e = 0; e < cardValues.length; e++) {
+        var cardName = `${cardValues[e]}${cardColor[i]}.png`;
+        var object_unoCard= new unoCard(cardName);
+        deckCards.push(object_unoCard);
+      }
+    }
+    deckCards.push(new unoCard("W.png"));
+    deckCards.push(new unoCard("D4W.png"));
+  }
+}
 
 function hideAll(){
   //var title=document.getElementById("title");
@@ -77,9 +98,41 @@ function showMyCards(){
   var allmyCards=document.getElementsByClassName("mydeck");
   for (var cardIndex=1; cardIndex<allmyCards.length; cardIndex++){
     var numCard=Math.floor(Math.random()*108);
-    allmyCards[cardIndex].src=`cards-front/${deckCards[numCard]}`;
+    while (check_Card(usedCards, numCard)==true){
+      console.log(`card ${deckCards[numCard].card_symbol} is already in use`);
+      numCard=Math.floor(Math.random()*108);
+
+    }
+
+    allmyCards[cardIndex].src=`cards-front/${deckCards[numCard].card_symbol}`;
+    mycards.push(deckCards[numCard]);
+    usedCards.push(numCard);
 
   }
+  generateOpp_cards();
 }
+
+
+function generateOpp_cards(){
+  while(oppsCards.length<7){
+       
+    var numCard=Math.floor(Math.random()*108);
+    while (check_Card(usedCards, numCard)==true){
+      console.log(`card ${deckCards[numCard].card_symbol} is already in use`);
+      numCard=Math.floor(Math.random()*108);
+
+    }
+    oppsCards.push(deckCards[numCard]);
+    usedCards.push(numCard);
+
+
+  }
+  for (var i = 0; i <oppsCards.length; i++){
+    console.log(oppsCards[i].card_symbol);
+  }
+}
+
+
+
 
 timeoutAnimationLoadPage();

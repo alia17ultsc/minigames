@@ -58,6 +58,11 @@ titlegame{
   background-color: blueviolet;
 }
 
+.qq{
+  position: absolute;
+  top: 10vh;
+}
+
 .deck{
   width: 8vw;
   position: absolute;
