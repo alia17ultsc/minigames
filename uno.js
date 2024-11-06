@@ -3,6 +3,11 @@ var usedCards=[];
 var mycards=[];
 var oppsCards=[];
 var lastOpenCard=null;
+var whoseTurn="meGo";
+var textMYturn=document.getElementsByClassName("me__")[0];
+var textCompturn=document.getElementsByClassName("comp")[0];
+
+
 function check_Card(cards, card){
   for(var i = 0; i<cards.length; i++){
     if (card == cards[i]){
@@ -13,7 +18,20 @@ function check_Card(cards, card){
 }
 
 
+function showTurntext(){
+  if (whoseTurn=="meGo"){
+    textMYturn.style.opacity="1";
+    textCompturn.style.opacity="0";
+  }
+  else{
+    textCompturn.style.opacity="1";
+    textMYturn.style.opacity="0";
+  }
+}
+
+
 function fullDeck(){
+showTurntext();
   var notFirstCards = ['D2B.png', 'D2G.png', 'D2R.png', 'D2Y.png', 'D4W.png', 'skipB.png', 'skipG.png', 'skipR.png', 'skipY.png', 'W.png', '_R.png', '_B.png', '_G.png', '_Y.png' ];
   allCards_deck();
   console.log(deckCards);

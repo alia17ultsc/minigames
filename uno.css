@@ -104,6 +104,30 @@ titlegame{
  border: 3px solid black;
 }
 
+.turn{
+  font-size: 2vw;
+
+}
+
+.comp{
+  position: absolute;
+  top: 10vh;
+  left: 6vw;
+  color: rgb(83, 65, 4);
+  text-shadow: 0 0 15px rgb(192, 192, 24);
+  opacity: 0;
+}
+
+.me__{
+  opacity: 0;
+  position: absolute;
+  bottom: 10vh;
+  left: 6vw;
+  color: rgb(12, 32, 8);
+  z-index: 3;
+  text-shadow: 0 0 15px rgb(57, 167, 14);
+}
+
 .p1{
   left: 15.3vw;
   top: 25vh;
@@ -299,6 +323,14 @@ titlegame{
 .firstOpenCardMove{
   transition: all 1s;
   transform: translateX(20vw);
+}
+
+.setbigZindex{
+  z-index: 200;
+}
+
+.compmove1{
+  animation: CompAnimationcard1 3s forwards;
 }
 
 

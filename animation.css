@@ -1,3 +1,4 @@
+/*disturbutingCards - cards spreading up and down */
 @keyframes disturbutingCards1{
   0%{
     transform: translate(0px, 0px);
@@ -91,6 +92,8 @@
     transform: translate(20vw, -32vh);
   }
 }
+
+/* mr - comp cards position after disturbuting cards */
 
 @keyframes mr1{
   0%{
@@ -254,7 +257,7 @@
   }
 }
 
-
+/* mmr - my cards position after disturbuting cards */
 
 @keyframes mmr1{
   0%{
@@ -323,7 +326,7 @@
 
 }
 
-
+/* moving my cards to center*/
 
 @keyframes animationcard1{
   0%{
@@ -393,6 +396,20 @@
 
   100%{
     transform: translate(21.5vw, -0.8vh);
+  }
+
+}
+
+
+/* moving comp cards to center*/
+
+@keyframes CompAnimationcard1{
+  0%{
+    transform: translate(30vw, -32vh);
+  }
+
+  100%{
+    transform: translate(20vw, 0vh);
   }
 
 }
