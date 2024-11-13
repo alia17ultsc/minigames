@@ -68,6 +68,7 @@ function allCards_deck() {
         console.log(cardName);
         console.log('####################');
         object_unoCard.color=cardColor[i];
+        object_unoCard.number=cardValues[e];
         // fill in number field
         deckCards.push(object_unoCard);
       }

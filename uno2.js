@@ -16,8 +16,14 @@ class unoCard{
 
 }
 
+
+var zindex=10;
+
 function checkmove(mycurrentcard, centerlastCard) {
   if (mycurrentcard.color==centerlastCard.color){
+    return true;
+  }
+  if (mycurrentcard.number==centerlastCard.number){
     return true;
   }   
   // add check number if it equals last number 
@@ -35,6 +41,9 @@ function clickcard(indexCard){
   {
   mycards_[indexCard].classList.remove(`mmr${indexCard+1}`);
   mycards_[indexCard].classList.add(`animationcard${indexCard+1}`);
+  mycards_[indexCard].style.zIndex = `${zindex}`;
+  console.log(`${zindex}`);
+  zindex++;
   lastOpenCard = mycards[indexCard];
   whoseTurn="comp";
   showTurntext();
@@ -56,17 +65,30 @@ function delaybetweenMoves() {
 function compCardmove(){
   var compCardtoPut=[];
   for (var i = 0; i<oppsCards.length; i++){
-    if (lastOpenCard.color == oppsCards[i].color){
+    if (checkmove(oppsCards[i], lastOpenCard)){
       compCardtoPut.push(oppsCards[i]);
     }
   }
   var graphicCompCardMove=document.getElementsByClassName("p7")[0];
+  var graphicCompCardsMove=document.getElementsByClassName("p7");
+  for (var i = 0; i<graphicCompCardsMove.length; i++){
+    if (graphicCompCardsMove[i].classList.contains("compmove1")){
+      continue;
+    }
+    graphicCompCardMove = graphicCompCardsMove[i];
+    break;
+  }
+
+
+
   graphicCompCardMove.src=`cards-front/${compCardtoPut[0].card_symbol}`;
   for (var i =1; i < 8; i++){
   graphicCompCardMove.classList.remove(`mr${i}`);
   }
 graphicCompCardMove.classList.add("compmove1");
-graphicCompCardMove.classList.add("setbigZindex");
+//graphicCompCardMove.classList.add("setbigZindex");
+graphicCompCardMove.style.zIndex=`${zindex}`;
+zindex++;
 lastOpenCard=compCardtoPut[0];
 whoseTurn="meGo";
 setTimeout(showTurntext, 1000);
