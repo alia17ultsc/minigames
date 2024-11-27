@@ -1,0 +1,13 @@
+@keyframes cardmovingtome{
+  0%{
+    transform: translate(10vw, 20vh);
+
+  }
+  100%{
+    transform: translate(20vw, 58vh);
+  }
+}
+
+.itookcard{
+  animation: cardmovingtome 0.5s forwards;
+}

@@ -7,6 +7,7 @@
   <link rel="stylesheet" href="rockpaperscissors.css">
   <link rel="stylesheet" href="animation.css">
   <link rel="stylesheet" href="uno.css">
+  <link rel="stylesheet" href="takecard.css">
   <script src="uno2.js" defer></script>
   <script src="uno.js" defer></script>
 </head>
@@ -24,17 +25,29 @@
   <div id="playersid" class="playersNumCont">
     <div class="playersNum">
       <titlegame>Two Players</titlegame>
-      <img class="gameIcon" src="pictures/randomgame.png" alt="">
+      <img class="gameIcon" src="pictures/2players.png" alt="">
       <button onclick="hideAll();"class="startgame">Start</button>
     </div>
-    <div class="playersNum"></div>
-    <div class="playersNum"></div>
-    <div class="playersNum"></div>
+    <div class="playersNum">
+      <titlegame>Three Players</titlegame>
+      <img class="gameIcon" src="pictures/3players.png" alt="">
+      <button onclick="hideAll();"class="startgame">Start</button>
+    </div>
+    <div class="playersNum">
+      <titlegame>Four Players</titlegame>
+      <img class="gameIcon" src="pictures/4players.png" alt="">
+      <button onclick="hideAll();"class="startgame">Start</button>
+    </div>
+    <div class="playersNum">
+      <titlegame>Five Players</titlegame>
+      <img class="gameIcon" src="pictures/5players.png" alt="">
+      <button onclick="hideAll();"class="startgame">Start</button>
+    </div>
   </div>
   <div class="gamefield">
     <div class="unoDeck">
       <div class="deckcardscont">
-      <img src="cards-front/uno.png" alt="" class="deck moveLeft">
+      <img src="cards-front/uno.png" alt="" onclick="takeCard()" class="deck moveLeft">
       <img src="cards-front/uno.png" alt="" class="mydeck firstOpenCard">
     </div>
       <!-- computer's cards -->

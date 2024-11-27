@@ -20,6 +20,7 @@ class unoCard{
 var zindex=10;
 
 function checkmove(mycurrentcard, centerlastCard) {
+  // add if 
   if (mycurrentcard.color==centerlastCard.color){
     return true;
   }
@@ -30,6 +31,19 @@ function checkmove(mycurrentcard, centerlastCard) {
   return false;
 }
 
+
+function takeCard(){
+  var deck=document.getElementsByClassName("deck")[0];
+  console.log(deck.length);
+  var mynewCard=document.createElement("img");
+  mynewCard.src="cards-front/uno.png";
+
+  var contNewcard=document.getElementsByClassName("deckcardscont")[0];
+  contNewcard.appendChild(mynewCard);
+  mynewCard.classList.add("itookcard");
+  mynewCard.style=deck.style;
+  mynewCard.style.width="8vw";
+}
 
 
 function clickcard(indexCard){
@@ -45,9 +59,18 @@ function clickcard(indexCard){
   console.log(`${zindex}`);
   zindex++;
   lastOpenCard = mycards[indexCard];
+  console.log('!!!!!!!!!!!!!!!!!!!');
+  console.log(mycards[indexCard].card_symbol);
+  if (mycards[indexCard].card_symbol=="_G.png" || mycards[indexCard].card_symbol=="_B.png" || mycards[indexCard].card_symbol=="_Y.png" || mycards[indexCard].card_symbol=="_R.png")
+  {
+    whoseTurn="meGo";
+  }
+  else
+  {
   whoseTurn="comp";
   showTurntext();
   delaybetweenMoves();
+  }
   // change value lastOpenCard
   }
   else{
@@ -79,18 +102,25 @@ function compCardmove(){
     break;
   }
 
-
-
   graphicCompCardMove.src=`cards-front/${compCardtoPut[0].card_symbol}`;
   for (var i =1; i < 8; i++){
   graphicCompCardMove.classList.remove(`mr${i}`);
   }
-graphicCompCardMove.classList.add("compmove1");
-//graphicCompCardMove.classList.add("setbigZindex");
-graphicCompCardMove.style.zIndex=`${zindex}`;
-zindex++;
-lastOpenCard=compCardtoPut[0];
-whoseTurn="meGo";
-setTimeout(showTurntext, 1000);
-
-}
+  graphicCompCardMove.classList.add("compmove1");
+  //graphicCompCardMove.classList.add("setbigZindex");
+  graphicCompCardMove.style.zIndex=`${zindex}`;
+  zindex++;
+  lastOpenCard=compCardtoPut[0];
+  if (oppsCards[indexCard].card_symbol=="_G.png" || oppsCards[indexCard].card_symbol=="_B.png" || oppsCards[indexCard].card_symbol=="_Y.png" || oppsCards[indexCard].card_symbol=="_R.png")
+    {
+      whoseTurn="comp";
+    }
+    else
+    {
+    whoseTurn="meGo";
+   // showTurntext();
+    //delaybetweenMoves();
+    }
+    whoseTurn="meGo";
+  setTimeout(showTurntext, 1000);
+  }
